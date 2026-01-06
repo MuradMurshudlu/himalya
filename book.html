@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Table | Himalaya</title>
+    <link rel="stylesheet" href="mainpage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <div class="video-container">
+        <div class="overlay"></div>
+        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1920&q=80" alt="Cinematic" class="hero-img">
+    </div>
+
+    <nav class="nomos-nav">
+        <div class="nav-container">
+            <div class="brand" onclick="location.href='index.html'">HIMALAYA</div>
+            <ul class="nav-links">
+                <li><a href="menu.html">MENU</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="hero-core" style="padding-top: 140px; align-items: flex-start;">
+        <div class="content-box" style="width: 100%; max-width: 500px;">
+            <h1 class="reveal-text" style="font-size: 2.5rem;">RESERVE.</h1>
+            <p class="sub-text">Experience the pure taste of tradition.</p>
+            
+            <form id="booking-form" style="display: flex; flex-direction: column; gap: 15px;">
+                <input type="text" id="name" placeholder="YOUR NAME" required style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 15px; color: white; font-family: 'Montserrat'; outline: none;">
+                <input type="email" id="email" placeholder="YOUR EMAIL" required style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 15px; color: white; font-family: 'Montserrat'; outline: none;">
+                
+                <div style="display: flex; gap: 10px;">
+                    <input type="date" id="date" required style="flex: 1; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 15px; color: white; outline: none;">
+                    <input type="time" id="time" required style="flex: 1; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 15px; color: white; outline: none;">
+                </div>
+                
+                <input type="number" id="guests" placeholder="NUMBER OF GUESTS" min="1" max="20" required style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 15px; color: white; font-family: 'Montserrat'; outline: none;">
+                
+                <button type="submit" class="action-item" style="cursor: pointer; width: 100%; border: 1px solid var(--gold); background: transparent; color: var(--gold); font-weight: 700;">
+                    CONFIRM RESERVATION
+                </button>
+            </form>
+            <p id="form-status" style="margin-top: 15px; font-size: 0.7rem; letter-spacing: 2px; text-align: center; color: var(--gold);"></p>
+        </div>
+    </main>
+
+    <script src="book.js"></script>
+</body>
+</html>

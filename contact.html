@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Himalaya Authentic</title>
+    <link rel="stylesheet" href="mainpage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .contact-core {
+            padding: 180px 8% 50px;
+            min-height: 100vh;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 40px;
+        }
+        .contact-info h2 {
+            font-family: 'Syncopate', sans-serif;
+            font-size: 0.8rem;
+            color: var(--gold);
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+        .info-detail {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 40px;
+            opacity: 0.8;
+        }
+        .map-box {
+            width: 100%;
+            height: 300px;
+            background: var(--glass);
+            border: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .map-box span {
+            font-size: 0.6rem;
+            letter-spacing: 2px;
+            opacity: 0.4;
+        }
+        @media (max-width: 768px) {
+            .contact-grid { grid-template-columns: 1fr; }
+            .reveal-text { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="video-container">
+        <div class="overlay"></div>
+        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1920&q=80" alt="Cinematic Food" class="hero-img">
+    </div>
+
+    <nav class="nomos-nav">
+        <div class="nav-container">
+            <div class="brand" onclick="location.href='index.html'" style="cursor:pointer">HIMALAYA</div>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="menu.html">MENU</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html" class="active">CONTACT</a></li>
+            </ul>
+            <div class="status-indicator">
+                <span class="dot"></span> <span id="open-status">CHECKING...</span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="contact-core">
+        <h1 class="reveal-text">GET IN TOUCH.</h1>
+        
+        <div class="contact-grid">
+            <div class="contact-info">
+                <section>
+                    <h2>LOCATION</h2>
+                    <p class="info-detail">160 Centennial Pkwy N, Hamilton, ON L8E 1H9</p>
+                </section>
+                
+                <section>
+                    <h2>RESERVATIONS</h2>
+                    <p class="info-detail">(905) 560-1555</p>
+                </section>
+
+                <div class="action-grid">
+                    <a href="tel:9055601555" class="action-item"><h3>CALL NOW</h3></a>
+                    <a href="https://maps.google.com" target="_blank" class="action-item"><h3>GET DIRECTIONS</h3></a>
+                </div>
+            </div>
+
+            <div class="map-placeholder">
+                <div class="map-box">
+                    <span>INTERACTIVE MAP SYSTEM LOADED</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="mainpage.js"></script>
+</body>
+</html>

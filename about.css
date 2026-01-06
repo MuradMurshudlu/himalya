@@ -1,0 +1,58 @@
+:root {
+    --gold: #C5A059;
+    --black: #050505;
+    --white: #ffffff;
+    --glass: rgba(255, 255, 255, 0.03);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden; /* Menu üçün aşağı skrola icazə vermək üçün */
+}
+
+/* Background Infrastructure */
+.video-container { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: -1; }
+.hero-img { width: 100%; height: 100%; object-fit: cover; opacity: 0.3; transition: transform 0.1s ease-out; }
+.overlay { position: absolute; width: 100%; height: 100%; background: linear-gradient(to bottom, transparent, var(--black)); }
+
+/* Navigation - FIXED FOR ALL PAGES */
+.nomos-nav { padding: 40px 5%; position: fixed; width: 100%; z-index: 1000; background: rgba(5,5,5,0.8); backdrop-filter: blur(15px); }
+.nav-container { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 20px; }
+.brand { font-family: 'Syncopate', sans-serif; font-weight: 700; letter-spacing: 4px; font-size: 1.2rem; cursor: pointer; }
+.nav-links { display: flex; list-style: none; gap: 40px; }
+.nav-links a { color: var(--white); text-decoration: none; font-size: 0.7rem; letter-spacing: 2px; opacity: 0.7; transition: 0.3s; }
+.nav-links a:hover, .nav-links a.active { opacity: 1; color: var(--gold); }
+
+/* Unified Layouts */
+.hero-core, .about-content, .menu-scroll { 
+    min-height: 100vh; 
+    padding: 180px 8% 100px; 
+    display: flex; 
+    flex-direction: column;
+}
+
+.reveal-text { font-family: 'Syncopate', sans-serif; font-size: 4rem; margin-bottom: 10px; color: var(--white); }
+.sub-text { opacity: 0.5; letter-spacing: 1px; margin-bottom: 30px; }
+
+/* Action & Menu Items */
+.action-grid { display: flex; gap: 15px; }
+.action-item {
+    text-decoration: none; color: var(--white); border: 1px solid rgba(255,255,255,0.2);
+    padding: 15px 35px; transition: 0.4s; background: var(--glass);
+}
+.action-item:hover { border-color: var(--gold); background: var(--gold); color: var(--black); }
+
+/* Menu & About Specifics */
+.category-title { font-family: 'Syncopate', sans-serif; color: var(--gold); margin: 40px 0 20px; font-size: 1.2rem; border-left: 3px solid var(--gold); padding-left: 15px; }
+.item-box { padding: 25px; background: var(--glass); border: 1px solid rgba(255,255,255,0.05); margin-bottom: 15px; transition: 0.3s; }
+.item-box:hover { border-color: rgba(197, 160, 89, 0.5); }
+
+@media (max-width: 768px) {
+    .reveal-text { font-size: 2.5rem; }
+    .nav-links { display: none; }
+    .action-grid { flex-direction: column; }
+}

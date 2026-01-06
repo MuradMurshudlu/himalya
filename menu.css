@@ -1,0 +1,37 @@
+:root {
+    --gold: #C5A059;
+    --black: #050505;
+    --white: #ffffff;
+    --card: rgba(255, 255, 255, 0.03);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--black); color: var(--white); font-family: 'Montserrat', sans-serif; overflow-x: hidden; }
+
+.overlay-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at top right, #1a1a1a, var(--black)); z-index: -1; }
+
+.nomos-nav { padding: 30px 5%; position: fixed; width: 100%; z-index: 100; background: rgba(5,5,5,0.8); backdrop-filter: blur(10px); }
+.nav-container { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; }
+.brand { font-family: 'Syncopate', sans-serif; font-weight: 700; letter-spacing: 4px; font-size: 1rem; }
+.nav-links { display: flex; list-style: none; gap: 30px; }
+.nav-links a { color: var(--white); text-decoration: none; font-size: 0.6rem; letter-spacing: 2px; opacity: 0.7; }
+
+.menu-core { padding: 150px 8% 50px; }
+.reveal-text { font-family: 'Syncopate', sans-serif; font-size: 3rem; margin-bottom: 5px; color: var(--gold); }
+.sub-text { opacity: 0.5; letter-spacing: 3px; font-size: 0.7rem; margin-bottom: 60px; text-transform: uppercase; }
+
+.category-block { margin-bottom: 60px; }
+.cat-title { font-family: 'Syncopate', sans-serif; font-size: 1.2rem; border-left: 3px solid var(--gold); padding-left: 15px; margin-bottom: 30px; letter-spacing: 3px; }
+
+.items-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+.menu-item { background: var(--card); border: 1px solid rgba(255,255,255,0.05); padding: 25px; transition: 0.4s; }
+.menu-item:hover { border-color: var(--gold); transform: translateY(-5px); }
+.item-header { display: flex; justify-content: space-between; margin-bottom: 10px; }
+.item-name { font-weight: 600; font-size: 0.9rem; letter-spacing: 1px; }
+.item-desc { font-size: 0.75rem; color: rgba(255,255,255,0.5); line-height: 1.6; }
+
+@media (max-width: 768px) {
+    .reveal-text { font-size: 2rem; }
+    .nav-links { display: none; }
+    .items-container { grid-template-columns: 1fr; }
+}
